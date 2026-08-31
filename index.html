@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>Anchorbase × Contact — 90 Day Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#121212;
+  --card:#1A1A1A;
+  --card-2:#202020;
+  --green:#CBF41C;
+  --white:#fff;
+  --w64:rgba(255,255,255,.64);
+  --w42:rgba(255,255,255,.42);
+  --div:rgba(255,255,255,.12);
+  --font:'Poppins',-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;
+  --max:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--black);color:var(--white);
+  font-family:var(--font);font-weight:400;font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
+h1,h2,h3{font-weight:300;letter-spacing:-.02em;margin:0}
+h1{font-size:clamp(34px,5.2vw,58px);line-height:1.08}
+h2{font-size:clamp(26px,3.4vw,38px);line-height:1.15}
+h3{font-size:20px;line-height:1.3}
+p{margin:0 0 16px}
+p:last-child{margin-bottom:0}
+.g{color:var(--green)}
+.sec{color:var(--w64)}
+.eyebrow{
+  font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.10em;
+  color:var(--w42);margin:0 0 18px;
+}
+
+/* ---------- header ---------- */
+header{border-bottom:1px solid var(--div)}
+.hbar{
+  max-width:var(--max);margin:0 auto;padding:22px 28px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+}
+.hbar svg{display:block;height:22px;width:auto}
+.pair{display:flex;align-items:center;gap:18px}
+.x{color:var(--w42);font-size:15px;font-weight:300}
+.ab-logo{height:21px;width:auto;display:block}
+.hmeta{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--w42);text-align:right}
+
+/* ---------- hero ---------- */
+.hero{padding:84px 0 64px}
+.hero h1{max-width:19ch}
+.hero .lede{font-size:19px;color:var(--w64);max-width:60ch;margin-top:26px;font-weight:300}
+
+/* ---------- generic section ---------- */
+section{padding:64px 0;border-top:1px solid var(--div)}
+.lead-p{font-size:18px;color:var(--white);font-weight:300}
+
+/* ---------- stat strip ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:18px;margin-top:38px}
+.stat{background:var(--card);border:1px solid var(--div);border-radius:18px;padding:26px 24px}
+.stat .n{font-size:44px;font-weight:300;line-height:1;letter-spacing:-.03em;color:var(--green)}
+.stat .n.small{font-size:30px}
+.stat .l{font-size:13px;color:var(--w64);margin-top:12px;line-height:1.45}
+
+/* ---------- funnel math ---------- */
+.mathgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:32px}
+.mstep{
+  background:var(--card);border:1px solid var(--div);border-radius:16px;padding:22px 20px;position:relative;
+}
+.mstep .k{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--w42)}
+.mstep .v{font-size:30px;font-weight:300;letter-spacing:-.02em;margin-top:10px}
+.mstep .v.hl{color:var(--green)}
+.mstep .d{font-size:12.5px;color:var(--w64);margin-top:8px;line-height:1.45}
+.note{font-size:12.5px;color:var(--w42);margin-top:22px;line-height:1.6;max-width:78ch}
+
+/* ---------- option cards ---------- */
+.hint{
+  display:flex;align-items:center;gap:9px;font-size:13px;color:var(--w42);margin-top:14px
+}
+.hint .dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex:none}
+.options{display:grid;gap:20px;margin-top:34px}
+.opt{
+  background:var(--card);border:1px solid var(--div);border-radius:20px;padding:0;
+  transition:border-color .3s ease,background .3s ease,transform .3s ease;
+  cursor:pointer;overflow:hidden;
+}
+.opt:hover,.opt.open{border-color:rgba(203,244,28,.42);background:var(--card-2)}
+.opt:focus-visible{outline:2px solid var(--green);outline-offset:3px}
+.opt-head{padding:30px 30px 0;display:flex;gap:26px;align-items:flex-start;flex-wrap:wrap}
+.opt-num{
+  flex:none;width:38px;height:38px;border-radius:10px;border:1px solid var(--div);
+  display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--w64);
+  transition:all .3s ease;
+}
+.opt:hover .opt-num,.opt.open .opt-num{background:var(--green);color:#121212;border-color:var(--green)}
+.opt-id{flex:1;min-width:240px}
+.opt-id h3{font-size:23px}
+.opt-tag{font-size:13.5px;color:var(--w64);margin-top:7px}
+.opt-price{text-align:right;flex:none}
+.opt-price .p{font-size:32px;font-weight:300;letter-spacing:-.02em;color:var(--green);line-height:1}
+.opt-price .per{font-size:12px;color:var(--w42);margin-top:7px;letter-spacing:.04em}
+.opt-body{padding:0 30px 30px}
+.headline-out{
+  margin-top:22px;padding:18px 20px;border-left:2px solid var(--green);
+  background:rgba(203,244,28,.055);border-radius:0 12px 12px 0;
+}
+.headline-out .k{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--w42);margin-bottom:7px}
+.headline-out .v{font-size:15.5px;color:var(--white);line-height:1.5}
+
+/* expandable */
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s cubic-bezier(.4,0,.2,1)}
+.detail-in{overflow:hidden;min-height:0}
+.opt:hover .detail,.opt.open .detail{grid-template-rows:1fr}
+.detail-pad{padding-top:26px;margin-top:26px;border-top:1px solid var(--div)}
+.dsub{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--w42);margin:0 0 14px}
+.dsub:not(:first-child){margin-top:28px}
+ul.inc{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:11px 26px}
+ul.inc li{
+  position:relative;padding-left:20px;font-size:14.5px;color:var(--w64);line-height:1.5;break-inside:avoid;
+}
+ul.inc li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--green)}
+ul.inc li b{color:var(--white);font-weight:500}
+.notin{font-size:13.5px;color:var(--w42);margin-top:20px;line-height:1.55;padding-left:20px;border-left:1px solid var(--div)}
+.bestfor{
+  margin-top:24px;font-size:14.5px;color:var(--white);background:rgba(255,255,255,.035);
+  border:1px solid var(--div);border-radius:12px;padding:16px 18px;
+}
+.bestfor b{color:var(--green);font-weight:500}
+.chev{
+  margin-top:20px;display:flex;align-items:center;gap:8px;font-size:12px;color:var(--w42);
+  text-transform:uppercase;letter-spacing:.08em;
+}
+.opt:hover .chev,.opt.open .chev{color:var(--green)}
+.chev svg{transition:transform .35s ease}
+.opt:hover .chev svg,.opt.open .chev svg{transform:rotate(180deg)}
+
+/* ---------- timeline ---------- */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin:32px 0 30px}
+.tab{
+  font-family:var(--font);font-size:14px;font-weight:400;color:var(--w64);
+  background:transparent;border:1px solid var(--div);border-radius:11px;
+  padding:11px 18px;cursor:pointer;transition:all .25s ease;
+}
+.tab:hover{color:var(--white);border-color:rgba(255,255,255,.3)}
+.tab[aria-selected="true"]{background:var(--green);color:#121212;border-color:var(--green);font-weight:500}
+.tl{display:none;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
+.tl.active{display:grid}
+.mo{background:var(--card);border:1px solid var(--div);border-radius:18px;padding:26px 24px;display:flex;flex-direction:column}
+.mo .mh{display:flex;align-items:baseline;gap:11px;padding-bottom:16px;border-bottom:1px solid var(--div);margin-bottom:18px}
+.mo .mn{font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--green);font-weight:500}
+.mo .mt{font-size:16px;color:var(--white);font-weight:300}
+.mo ul{list-style:none;padding:0;margin:0 0 20px}
+.mo li{position:relative;padding-left:18px;font-size:14px;color:var(--w64);line-height:1.5;margin-bottom:10px}
+.mo li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.28)}
+.mo .out{
+  margin-top:auto;padding-top:16px;border-top:1px solid var(--div);
+  font-size:13.5px;line-height:1.5;
+}
+.mo .out .k{font-size:10.5px;text-transform:uppercase;letter-spacing:.09em;color:var(--w42);display:block;margin-bottom:6px}
+.mo .out .v{color:var(--green)}
+
+/* ---------- need ---------- */
+.need{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:34px}
+.need .n{background:var(--card);border:1px solid var(--div);border-radius:16px;padding:24px 22px}
+.need .n h4{margin:0 0 9px;font-size:15.5px;font-weight:500}
+.need .n p{font-size:13.5px;color:var(--w64);margin:0;line-height:1.55}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
+.fbar{display:flex;justify-content:space-between;gap:26px;flex-wrap:wrap;align-items:flex-start}
+.fbar svg{height:20px;width:auto;display:block}
+.tag{font-size:13px;color:var(--w42);margin-top:12px}
+.src{font-size:11.5px;color:var(--w42);max-width:52ch;line-height:1.65;text-align:right}
+
+@media (max-width:720px){
+  .wrap{padding:0 20px}
+  .hbar{padding:18px 20px}
+  .hero{padding:56px 0 46px}
+  section{padding:48px 0}
+  .opt-head{padding:24px 22px 0;gap:16px}
+  .opt-body{padding:0 22px 24px}
+  .opt-price{text-align:left}
+  .hmeta{text-align:left}
+  .src{text-align:left}
+  .detail{grid-template-rows:1fr}
+}
+@media print{
+  body{background:#121212}
+  .detail{grid-template-rows:1fr!important}
+  .tl{display:grid!important}
+  .tabs,.hint,.chev{display:none!important}
+  section{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <div class="pair">
+      <svg width="101" height="24" viewBox="0 0 101 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact"><path fill-rule="evenodd" clip-rule="evenodd" d="M50.1171 0H46.2035V4.20857C46.2035 8.48641 49.6272 11.956 53.8485 11.956H58.0014V8.06209H50.1171V0ZM29.1474 8.06201H37.3791H37.382C41.6289 8.06201 45.0726 11.5518 45.0726 15.8557V23.6175H41.0849V11.9559H32.9101V23.6175H29.1474V8.06201ZM0 15.8411C0 20.1363 3.43512 23.6203 7.67633 23.6203H11.533V19.7264H3.75699V11.9587H11.533V8.06478H7.67633C3.43512 8.06189 0 11.5459 0 15.8411ZM76.5381 15.8425C76.5388 20.1371 79.9737 23.6203 84.2144 23.6203H88.0711V19.7264H80.2951V11.9587H88.0711V8.06478H84.2144C79.9765 8.06478 76.5388 11.5452 76.5381 15.8425ZM67.7766 8.06201H66.737C62.5328 8.10531 59.1375 11.5691 59.1375 15.8412C59.1375 20.1364 62.5727 23.6204 66.8139 23.6204H75.4245V15.8124C75.4245 11.5345 72.0007 8.06489 67.7795 8.06489L67.7766 8.06201ZM71.508 19.7236H62.8974V11.9559H71.508V19.7236ZM46.2035 11.9561H50.1171V20.0182H58.0014V23.9121H53.8485C49.6272 23.9121 46.2035 20.4425 46.2035 16.1647V11.9561ZM89.2021 11.9561H93.1157V20.0182H101V23.9121H96.8471C92.6258 23.9121 89.2021 20.4425 89.2021 16.1647V11.9561ZM93.1186 8.06209V0H89.2021V4.20857C89.2021 8.48641 92.6258 11.956 96.8471 11.956H101V8.06209H93.1186ZM12.6636 15.8412C12.6636 11.5432 16.1016 8.06201 20.3399 8.06201C24.5811 8.06201 28.0163 11.5432 28.0163 15.8412C28.0163 20.1393 24.5811 23.6204 20.3399 23.6204C16.0987 23.6204 12.6636 20.1393 12.6636 15.8412ZM16.2326 15.8412C16.2326 18.1389 18.0726 20.0036 20.3399 20.0036C22.6072 20.0036 24.4473 18.1389 24.4473 15.8412C24.4473 13.5435 22.6072 11.6788 20.3399 11.6788C18.0726 11.6788 16.2326 13.5435 16.2326 15.8412Z" fill="#ffffff"/></svg>
+      <span class="x">for</span>
+      <img class="ab-logo" src="data:image/png;base64,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" alt="Anchorbase">
+    </div>
+    <div class="hmeta">90 Day Growth Proposal<br>September 2026</div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <p class="eyebrow">Prepared for Doug van Spronsen</p>
+    <h1>Your AEs don't need traffic. They need a <span class="g">full calendar.</span></h1>
+    <p class="lede">Everything in this document is built backwards from one number: qualified demos landing in front of your sales team every month. Rankings, citations and technical fixes are how we get there. They are not the point.</p>
+  </div>
+
+  <section>
+    <p class="eyebrow">Where you are right now</p>
+    <h2>Nobody in your category has claimed search. <span class="g">Including the leader.</span></h2>
+    <p class="lead-p" style="margin-top:24px;max-width:66ch">We pulled Dealer-Pay, since you named them. They are a real business with real dealer association partnerships. Here is what they earn from people searching for what they sell, rather than searching for their name.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="n">27</div>
+        <div class="l">Visits a month Dealer-Pay gets from non branded search. Their other 835 visits are people typing their name.</div>
+      </div>
+      <div class="stat">
+        <div class="n">5</div>
+        <div class="l">Total times Dealer-Pay is cited across ChatGPT, Perplexity, Gemini, Copilot and Google AI Overviews combined.</div>
+      </div>
+      <div class="stat">
+        <div class="n">1</div>
+        <div class="l">Times Anchorbase is cited. You are four citations behind the category leader, not four years.</div>
+      </div>
+      <div class="stat">
+        <div class="n small">2,850</div>
+        <div class="l">Monthly searches on the three terms that describe exactly what you sell. None of them have a page on your site today.</div>
+      </div>
+    </div>
+
+    <p class="note">Every buyer in your market who researches online right now ends up on a generic listicle or a competitor's homepage. There is no incumbent defending this category. That is unusual, and it does not last.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">What this turns into</p>
+    <h2>The path from a search to a booked demo</h2>
+    <p class="lead-p" style="margin-top:24px;max-width:66ch">This is the chain we are building. The numbers below are the mid case, and every assumption is written out underneath so you can argue with any of them.</p>
+
+    <div class="mathgrid">
+      <div class="mstep">
+        <div class="k">Step 1</div>
+        <div class="v">2,850</div>
+        <div class="d">Monthly searches across embedded payments, b2b payment processing and integrated payment processing.</div>
+      </div>
+      <div class="mstep">
+        <div class="k">Step 2</div>
+        <div class="v">280</div>
+        <div class="d">Visits a month once those pages hold page one. Conservative, roughly 10% of the cluster.</div>
+      </div>
+      <div class="mstep">
+        <div class="k">Step 3</div>
+        <div class="v hl">8</div>
+        <div class="d">Demos a month at a 3% conversion rate on bottom of funnel pages. Industry range is 2 to 5%.</div>
+      </div>
+      <div class="mstep">
+        <div class="k">Step 4</div>
+        <div class="v hl">$48k</div>
+        <div class="d">New LTV per month at a 20% close rate and your $30,000 customer value. Roughly 1.6 customers.</div>
+      </div>
+    </div>
+
+    <p class="note"><b style="color:var(--w64);font-weight:400">Assumptions, so you can check them:</b> search volumes are Ahrefs US data pulled 31 August 2026. The 10% capture rate assumes positions 1 to 3 on the cluster, not position 1 on every term. 3% is the low middle of the bottom of funnel benchmark, and these are buying intent pages, not blog posts. The 20% close rate is a placeholder, so swap in your real number and the model still works. Customer value of $30,000 is yours, from our call on 27 August.<br><br>One thing worth saying plainly: at $30,000 LTV, a single new customer covers the entire 90 day Growth engagement. Everything past that is margin, and the pages keep working in month four.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">Three ways to run this</p>
+    <h2>Pick the engine that fits the next quarter</h2>
+    <div class="hint"><span class="dot"></span> Hover or tap any option to see the full breakdown</div>
+
+    <div class="options">
+
+      <!-- OPTION 1 -->
+      <article class="opt" tabindex="0" role="button" aria-expanded="false">
+        <div class="opt-head">
+          <div class="opt-num">1</div>
+          <div class="opt-id">
+            <h3>AI Search &amp; SEO, Growth</h3>
+            <div class="opt-tag">Own the category in Google and in AI answers</div>
+          </div>
+          <div class="opt-price"><div class="p">$9,997</div><div class="per">PER MONTH</div></div>
+        </div>
+        <div class="opt-body">
+          <div class="headline-out">
+            <div class="k">What your AE team gets</div>
+            <div class="v">Inbound demos from people who typed exactly what you sell into Google or asked an AI which system to use. Slowest to start, and the only one that compounds on its own after we stop.</div>
+          </div>
+          <div class="detail"><div class="detail-in"><div class="detail-pad">
+            <p class="dsub">What we build</p>
+            <ul class="inc">
+              <li><b>Complete keyword and category strategy.</b> Every buying term mapped to one page so nothing competes with itself. Yours to keep.</li>
+              <li><b>12 new pages.</b> 3 category, 3 integration, 4 vertical, 2 comparison.</li>
+              <li><b>Full technical build.</b> Structured data across the site, the fix list executed top to bottom.</li>
+              <li><b>Your 47 existing posts, triaged.</b> Keep, retarget, merge or remove.</li>
+              <li><b>AI answer optimization.</b> Every page written so ChatGPT and Perplexity can quote it.</li>
+              <li><b>AI visibility tracking.</b> Daily share of voice against Dealer-Pay, reported monthly.</li>
+              <li><b>Design, Slack access, monthly calls.</b></li>
+            </ul>
+            <p class="dsub">Why this one matters for you</p>
+            <ul class="inc">
+              <li>Your 47 posts currently rank for two keywords, and both are <b>"what is a convenience fee"</b>. That is a consumer question, not a controller's. Right subject, wrong reader.</li>
+              <li>Nothing on your site sits in striking distance of page one. There is no quick optimization play here, which is exactly why the full build is the honest recommendation.</li>
+              <li><b>"Embedded payments"</b> gets 1,700 searches a month at difficulty 2. It is your own category term and no page on your site targets it.</li>
+              <li>The integration pages are the sleeper. Someone searching <b>"AR automation for NetSuite"</b> has already told your AE their stack and their problem before the call starts.</li>
+            </ul>
+            <div class="bestfor"><b>Best for:</b> building the asset that keeps producing demos after the engagement ends. No content or distribution arm.</div>
+          </div></div></div>
+          <div class="chev">Full breakdown <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        </div>
+      </article>
+
+      <!-- OPTION 2 -->
+      <article class="opt" tabindex="0" role="button" aria-expanded="false">
+        <div class="opt-head">
+          <div class="opt-num">2</div>
+          <div class="opt-id">
+            <h3>Inbound Engineering</h3>
+            <div class="opt-tag">A full time content operator inside Anchorbase</div>
+          </div>
+          <div class="opt-price"><div class="p">$5,833</div><div class="per">PER MONTH · $17,500 FOR THE SPRINT</div></div>
+        </div>
+        <div class="opt-body">
+          <div class="headline-out">
+            <div class="k">What your AE team gets</div>
+            <div class="v">Warm conversations, fastest. Replies, DMs and referrals from people who already know who you are before your AE dials. Distribution does not wait on Google, so this produces the first meetings.</div>
+          </div>
+          <div class="detail"><div class="detail-in"><div class="detail-pad">
+            <p class="dsub">What we build</p>
+            <ul class="inc">
+              <li><b>One operator on your company alone.</b> Not a ghostwriter split across ten accounts.</li>
+              <li><b>Founder and team interviews.</b> They mine you, your sales calls and your SOPs for what you actually know.</li>
+              <li><b>Daily output on X and LinkedIn</b> under your name and the company's.</li>
+              <li><b>Video content.</b> You said you would do it and you already have the audience.</li>
+              <li><b>Lead magnets and scripts</b> that give your AEs a reason to follow up.</li>
+              <li><b>Targeted engagement.</b> The 30 or so accounts you should be in front of, worked daily and properly.</li>
+              <li><b>Community presence</b> in the Reddit and forum threads where controllers and practice managers ask who to use.</li>
+            </ul>
+            <p class="dsub">Why this one matters for you</p>
+            <ul class="inc">
+              <li>Most companies cannot run this program, because nobody internally will sit for the camera or the interview. <b>You already have the following and you already said yes.</b> That is the whole qualifying test and you pass it.</li>
+              <li>Your buyers are dealership controllers, practice managers and operators. They are on LinkedIn, and they ask peers before they ask Google.</li>
+              <li>This is the only option that puts meetings on the board inside the first sprint rather than at the end of it.</li>
+              <li>The price is half of $35,000 because the program is new and the first group is small. It will not hold indefinitely.</li>
+            </ul>
+            <div class="bestfor"><b>Best for:</b> pipeline in weeks rather than months. No technical work on the site and no ranking pages.</div>
+          </div></div></div>
+          <div class="chev">Full breakdown <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        </div>
+      </article>
+
+      <!-- OPTION 3 -->
+      <article class="opt" tabindex="0" role="button" aria-expanded="false">
+        <div class="opt-head">
+          <div class="opt-num">3</div>
+          <div class="opt-id">
+            <h3>Inbound Engineering + AI Search &amp; SEO</h3>
+            <div class="opt-tag">Both engines running together</div>
+          </div>
+          <div class="opt-price"><div class="p">$11,997</div><div class="per">PER MONTH</div></div>
+        </div>
+        <div class="opt-body">
+          <div class="headline-out">
+            <div class="k">What your AE team gets</div>
+            <div class="v">Warm meetings from month one while the search asset builds underneath it. By month three both channels are feeding the same calendar, and the content is what earns the citations that make the pages rank.</div>
+          </div>
+          <div class="detail"><div class="detail-in"><div class="detail-pad">
+            <p class="dsub">What we build</p>
+            <ul class="inc">
+              <li><b>Everything in Option 1.</b> Full strategy, 12 pages, complete technical build, AI optimization, tracking.</li>
+              <li><b>Everything in Option 2.</b> An embedded Inbound Engineer, working on Anchorbase alone.</li>
+              <li><b>One strategy across both.</b> We build the keyword map once and both sides run on it.</li>
+            </ul>
+            <p class="dsub">Why the two together beat the two apart</p>
+            <ul class="inc">
+              <li>Your content creates the mentions. Mentions are what AI engines cite. Citations are what make the pages rank. Run separately these are two invoices, run together they are one engine.</li>
+              <li>The interviews that feed your LinkedIn and X content are the same interviews that give the category pages something no competitor can copy. We do that work once.</li>
+              <li><b>You cover the gap in the calendar.</b> Search takes a quarter to produce. Content produces in weeks. Together your AEs are not sitting on their hands in month one waiting for Google.</li>
+              <li>Bought separately these two programs are <b>$15,830 a month</b>. Together they are $11,997.</li>
+            </ul>
+            <div class="bestfor"><b>Best for:</b> getting to $100k MRR on a timeline. This is the one we recommend.</div>
+          </div></div></div>
+          <div class="chev">Full breakdown <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">The first 90 days</p>
+    <h2>What actually happens, month by month</h2>
+    <p class="lead-p" style="margin-top:24px;max-width:64ch">Switch between the options to see how each sprint runs, and when your AEs start seeing something land.</p>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-tl="t1">Option 1 · Growth</button>
+      <button class="tab" role="tab" aria-selected="false" data-tl="t2">Option 2 · Inbound Engineering</button>
+      <button class="tab" role="tab" aria-selected="false" data-tl="t3">Option 3 · Both</button>
+    </div>
+
+    <!-- TL 1 -->
+    <div class="tl active" id="t1" role="tabpanel">
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 1</span><span class="mt">Build the foundation</span></div>
+        <ul>
+          <li>Full site audit and prioritised fix list</li>
+          <li>Complete keyword map across all three tiers</li>
+          <li>AI visibility baseline set against Dealer-Pay</li>
+          <li>Your 47 posts triaged into keep, retarget, merge or remove</li>
+          <li>Three page templates built, yours to reuse</li>
+          <li>Homepage and pricing page rebuilt around "embedded payments"</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Nothing yet, and we are not going to pretend otherwise. This is the month that makes months two and three work.</span></div>
+      </div>
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 2</span><span class="mt">Pages go live</span></div>
+        <ul>
+          <li>Six pages published: three category, three integration</li>
+          <li>Structured data deployed across the site</li>
+          <li>Technical fix list executed</li>
+          <li>Post triage carried out, cannibalisation cleaned up</li>
+          <li>First AI citations start appearing</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">First inbound demos, from the integration pages. Low volume, very high intent, and they arrive knowing their own stack.</span></div>
+      </div>
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 3</span><span class="mt">Compound and hand over</span></div>
+        <ul>
+          <li>Six more pages: four vertical, two comparison</li>
+          <li>Page one positions on the low difficulty category terms</li>
+          <li>Vertical pages surfacing in ChatGPT answers</li>
+          <li>Q2 roadmap documented and queued</li>
+          <li>Your team trained on the templates and the map</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Consistent demo flow starting, and rising every month after without more spend.</span></div>
+      </div>
+    </div>
+
+    <!-- TL 2 -->
+    <div class="tl" id="t2" role="tabpanel">
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 1</span><span class="mt">Embed and start shipping</span></div>
+        <ul>
+          <li>Your Inbound Engineer onboards and interviews you</li>
+          <li>They sit in on sales calls and read the objection patterns</li>
+          <li>Content thesis and first 30 day calendar built</li>
+          <li>Daily posting begins in week two</li>
+          <li>Target list of 30 accounts and operators built</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">First warm conversations by weeks three and four, out of comments, replies and DMs.</span></div>
+      </div>
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 2</span><span class="mt">Full production</span></div>
+        <ul>
+          <li>Daily output across X and LinkedIn</li>
+          <li>First video content shipped</li>
+          <li>Lead magnet live and collecting</li>
+          <li>Active in the Reddit and community threads your buyers use</li>
+          <li>Founder interviews turned into posts and threads</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Steady warm inbound. People replying who already know who you are, plus a magnet list to work.</span></div>
+      </div>
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 3</span><span class="mt">Audience compounds</span></div>
+        <ul>
+          <li>Second lead magnet built off the best performing content</li>
+          <li>Content repurposed across every channel</li>
+          <li>Engagement list expanded off what converted</li>
+          <li>Full quarter report with attribution on every sourced meeting</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Reliable warm flow, and a founder brand your competitors cannot copy quickly.</span></div>
+      </div>
+    </div>
+
+    <!-- TL 3 -->
+    <div class="tl" id="t3" role="tabpanel">
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 1</span><span class="mt">Both engines start</span></div>
+        <ul>
+          <li>Inbound Engineer embeds, interviews begin, posting starts week two</li>
+          <li>Full site audit and keyword map built</li>
+          <li>AI visibility baseline set against Dealer-Pay</li>
+          <li>47 posts triaged, templates built</li>
+          <li>Homepage and pricing rebuilt around "embedded payments"</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">First warm conversations by weeks three and four, while the search asset is under construction.</span></div>
+      </div>
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 2</span><span class="mt">Content feeds the pages</span></div>
+        <ul>
+          <li>Six pages live: three category, three integration</li>
+          <li>Technical build executed, structured data across the site</li>
+          <li>Daily content in full production, first video shipped</li>
+          <li>Interviews feeding both the posts and the page copy</li>
+          <li>First AI citations appearing, helped by the mentions</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Two sources at once. Warm inbound from content, plus the first high intent demos off the integration pages.</span></div>
+      </div>
+      <div class="mo">
+        <div class="mh"><span class="mn">Month 3</span><span class="mt">The engine turns over</span></div>
+        <ul>
+          <li>Six more pages: four vertical, two comparison</li>
+          <li>Page one on the low difficulty category terms</li>
+          <li>Second lead magnet, content compounding</li>
+          <li>Q2 roadmap queued, team trained on the system</li>
+          <li>Full quarter report with attribution on every meeting</li>
+        </ul>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Both channels feeding one calendar, and search volume still climbing from here.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">What we need from you</p>
+    <h2>Four things, named now rather than in week three</h2>
+    <div class="need">
+      <div class="n">
+        <h4>About two hours in week one</h4>
+        <p>Then thirty minutes a week. The content engine runs on what is in your head. If nobody hands that over there is nothing to write.</p>
+      </div>
+      <div class="n">
+        <h4>Access to sales calls</h4>
+        <p>The objections your AEs hear every day are the highest converting content we can make. We want to hear them raw.</p>
+      </div>
+      <div class="n">
+        <h4>CMS and Search Console, week one</h4>
+        <p>Otherwise the technical work sits waiting on a login while the clock runs.</p>
+      </div>
+      <div class="n">
+        <h4>One person who approves</h4>
+        <p>You or somebody you name. Approval bottlenecks are the single most common reason a 90 day sprint delivers 60 days of work.</p>
+      </div>
+    </div>
+    <p class="note">You have no internal marketing resource today. That is why all three options leave you holding templates, a keyword map and a documented system at the end, rather than a dependency on us.</p>
+  </section>
+
+</div>
+
+<footer>
+  <div class="wrap fbar">
+    <div>
+      <svg width="101" height="24" viewBox="0 0 101 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Contact"><path fill-rule="evenodd" clip-rule="evenodd" d="M50.1171 0H46.2035V4.20857C46.2035 8.48641 49.6272 11.956 53.8485 11.956H58.0014V8.06209H50.1171V0ZM29.1474 8.06201H37.3791H37.382C41.6289 8.06201 45.0726 11.5518 45.0726 15.8557V23.6175H41.0849V11.9559H32.9101V23.6175H29.1474V8.06201ZM0 15.8411C0 20.1363 3.43512 23.6203 7.67633 23.6203H11.533V19.7264H3.75699V11.9587H11.533V8.06478H7.67633C3.43512 8.06189 0 11.5459 0 15.8411ZM76.5381 15.8425C76.5388 20.1371 79.9737 23.6203 84.2144 23.6203H88.0711V19.7264H80.2951V11.9587H88.0711V8.06478H84.2144C79.9765 8.06478 76.5388 11.5452 76.5381 15.8425ZM67.7766 8.06201H66.737C62.5328 8.10531 59.1375 11.5691 59.1375 15.8412C59.1375 20.1364 62.5727 23.6204 66.8139 23.6204H75.4245V15.8124C75.4245 11.5345 72.0007 8.06489 67.7795 8.06489L67.7766 8.06201ZM71.508 19.7236H62.8974V11.9559H71.508V19.7236ZM46.2035 11.9561H50.1171V20.0182H58.0014V23.9121H53.8485C49.6272 23.9121 46.2035 20.4425 46.2035 16.1647V11.9561ZM89.2021 11.9561H93.1157V20.0182H101V23.9121H96.8471C92.6258 23.9121 89.2021 20.4425 89.2021 16.1647V11.9561ZM93.1186 8.06209V0H89.2021V4.20857C89.2021 8.48641 92.6258 11.956 96.8471 11.956H101V8.06209H93.1186ZM12.6636 15.8412C12.6636 11.5432 16.1016 8.06201 20.3399 8.06201C24.5811 8.06201 28.0163 11.5432 28.0163 15.8412C28.0163 20.1393 24.5811 23.6204 20.3399 23.6204C16.0987 23.6204 12.6636 20.1393 12.6636 15.8412ZM16.2326 15.8412C16.2326 18.1389 18.0726 20.0036 20.3399 20.0036C22.6072 20.0036 24.4473 18.1389 24.4473 15.8412C24.4473 13.5435 22.6072 11.6788 20.3399 11.6788C18.0726 11.6788 16.2326 13.5435 16.2326 15.8412Z" fill="#ffffff"/></svg>
+      <div class="tag">The search agency built for what's next.</div>
+    </div>
+    <div class="src">
+      Search volumes, keyword difficulty, CPC and AI citation counts from Ahrefs, US data, pulled 31 August 2026. AI citations measured across ChatGPT, Perplexity, Google AI Overviews, Gemini and Copilot. Positioning and integration data from anchorbase.com and dealer-pay.com. Customer value, revenue and target figures as provided by Anchorbase on 27 August 2026.
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Option cards: click or keyboard toggles a pinned open state (hover handles desktop)
+  document.querySelectorAll('.opt').forEach(function(card){
+    function toggle(){
+      var open = card.classList.toggle('open');
+      card.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    card.addEventListener('click', toggle);
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+    });
+  });
+
+  // Timeline tabs
+  var tabs = document.querySelectorAll('.tab');
+  tabs.forEach(function(tab){
+    tab.addEventListener('click', function(){
+      tabs.forEach(function(t){ t.setAttribute('aria-selected','false'); });
+      tab.setAttribute('aria-selected','true');
+      document.querySelectorAll('.tl').forEach(function(p){ p.classList.remove('active'); });
+      var target = document.getElementById(tab.dataset.tl);
+      if(target){ target.classList.add('active'); }
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
