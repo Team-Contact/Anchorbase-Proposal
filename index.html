@@ -81,6 +81,20 @@ section{padding:64px 0;border-top:1px solid var(--div)}
 .mstep .d{font-size:12.5px;color:var(--w64);margin-top:8px;line-height:1.45}
 .note{font-size:12.5px;color:var(--w42);margin-top:22px;line-height:1.6;max-width:78ch}
 
+/* ---------- keyword table ---------- */
+.tablewrap{overflow-x:auto;margin-top:32px;border:1px solid var(--div);border-radius:16px;background:var(--card)}
+table.kw{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px}
+table.kw th{
+  text-align:left;font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--w42);padding:16px 20px;border-bottom:1px solid var(--div);white-space:nowrap;
+}
+table.kw td{padding:14px 20px;border-bottom:1px solid rgba(255,255,255,.06);color:var(--w64)}
+table.kw tr:last-child td{border-bottom:none}
+table.kw td:first-child{color:var(--white)}
+table.kw td.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+table.kw td.hl{color:var(--green)}
+table.kw tr.star td:first-child{color:var(--green)}
+
 /* ---------- option cards ---------- */
 .hint{
   display:flex;align-items:center;gap:9px;font-size:13px;color:var(--w42);margin-top:14px
@@ -241,8 +255,8 @@ footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
         <div class="l">Times Anchorbase is cited. You are four citations behind the category leader, not four years.</div>
       </div>
       <div class="stat">
-        <div class="n small">2,850</div>
-        <div class="l">Monthly searches on the three terms that describe exactly what you sell. None of them have a page on your site today.</div>
+        <div class="n small">20,780</div>
+        <div class="l">Monthly buying intent searches across your category. Almost none of them have a page on your site today.</div>
       </div>
     </div>
 
@@ -257,27 +271,57 @@ footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
     <div class="mathgrid">
       <div class="mstep">
         <div class="k">Step 1</div>
-        <div class="v">2,850</div>
-        <div class="d">Monthly searches across embedded payments, b2b payment processing and integrated payment processing.</div>
+        <div class="v">20,780</div>
+        <div class="d">Buying intent searches every month across embedded payments, AR automation, invoice automation, payment reconciliation and b2b payments.</div>
       </div>
       <div class="mstep">
         <div class="k">Step 2</div>
-        <div class="v">280</div>
-        <div class="d">Visits a month once those pages hold page one. Conservative, roughly 10% of the cluster.</div>
+        <div class="v">500</div>
+        <div class="d">Visits a month once your pages hold page one. Conservative, roughly 2.5% of that pool.</div>
       </div>
       <div class="mstep">
         <div class="k">Step 3</div>
-        <div class="v hl">8</div>
+        <div class="v hl">15</div>
         <div class="d">Demos a month at a 3% conversion rate on bottom of funnel pages. Industry range is 2 to 5%.</div>
       </div>
       <div class="mstep">
         <div class="k">Step 4</div>
-        <div class="v hl">$48k</div>
-        <div class="d">New LTV per month at a 20% close rate and your $30,000 customer value. Roughly 1.6 customers.</div>
+        <div class="v hl">3</div>
+        <div class="d">New customers a month at a 20% close rate. That is deals on the board, not a traffic number.</div>
       </div>
     </div>
 
-    <p class="note"><b style="color:var(--w64);font-weight:400">Assumptions, so you can check them:</b> search volumes are Ahrefs US data pulled 31 August 2026. The 10% capture rate assumes positions 1 to 3 on the cluster, not position 1 on every term. 3% is the low middle of the bottom of funnel benchmark, and these are buying intent pages, not blog posts. The 20% close rate is a placeholder, so swap in your real number and the model still works. Customer value of $30,000 is yours, from our call on 27 August.<br><br>One thing worth saying plainly: at $30,000 LTV, a single new customer covers the entire 90 day Growth engagement. Everything past that is margin, and the pages keep working in month four.</p>
+    <p class="note"><b style="color:var(--w64);font-weight:400">Assumptions, so you can check them:</b> the 20,780 is the top 100 buying intent keywords across five category seeds, Ahrefs US data pulled 31 August 2026. It is not the whole category, it is the part we can name. Ahrefs also underreports search volume, so real demand sits meaningfully higher. The 2.5% capture assumes twelve pages holding page one on their own slice, not position one on every term in the category. 3% is the low middle of the bottom of funnel benchmark, and these are buying intent pages, not blog posts. The 20% close rate is a placeholder, so swap in your real number and the model still works.<br><br>Two things worth saying plainly. These are the numbers once the pages mature, not what month three looks like on its own. And at your $30,000 customer value, a single new customer covers the entire 90 day engagement. Everything past that is margin, and the pages keep working in month four.</p>
+  </section>
+
+  <section>
+    <p class="eyebrow">A sample of what's sitting there</p>
+    <h2>Twelve of the terms. <span class="g">None of them are yours.</span></h2>
+    <p class="lead-p" style="margin-top:24px;max-width:66ch">These came out of one afternoon of research, filtered to buying intent only. Difficulty runs 0 to 100. Anything under 20 is reachable inside a quarter for a site your size.</p>
+
+    <div class="tablewrap">
+      <table class="kw">
+        <thead>
+          <tr><th>Keyword</th><th class="num">Searches/mo</th><th class="num">Difficulty</th><th class="num">Cost per click</th></tr>
+        </thead>
+        <tbody>
+          <tr class="star"><td>invoice automation software</td><td class="num">3,500</td><td class="num hl">5</td><td class="num">$0.45</td></tr>
+          <tr><td>accounts receivable automation software</td><td class="num">1,200</td><td class="num hl">5</td><td class="num">$1.10</td></tr>
+          <tr><td>invoice automation solution</td><td class="num">800</td><td class="num hl">5</td><td class="num">$0.60</td></tr>
+          <tr class="star"><td>payment reconciliation software</td><td class="num">700</td><td class="num hl">1</td><td class="num hl">$30.00</td></tr>
+          <tr><td>b2b payment processing</td><td class="num">700</td><td class="num hl">3</td><td class="num">$14.00</td></tr>
+          <tr class="star"><td>ar automation software</td><td class="num">500</td><td class="num">19</td><td class="num hl">$35.00</td></tr>
+          <tr><td>b2b payments platform</td><td class="num">450</td><td class="num hl">3</td><td class="num">$2.50</td></tr>
+          <tr class="star"><td>ar automation tools</td><td class="num">250</td><td class="num hl">12</td><td class="num hl">$50.00</td></tr>
+          <tr><td>ar automation solutions</td><td class="num">250</td><td class="num hl">1</td><td class="num">$25.00</td></tr>
+          <tr class="star"><td>best accounts receivable automation software</td><td class="num">150</td><td class="num hl">12</td><td class="num hl">$80.00</td></tr>
+          <tr><td>embedded payments for platforms</td><td class="num">150</td><td class="num hl">3</td><td class="num">$30.00</td></tr>
+          <tr><td>ar automation for netsuite</td><td class="num">90</td><td class="num hl">low</td><td class="num">n/a</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">Read the cost per click column before the volume column. Somebody is paying <b style="color:var(--white);font-weight:500">$80 a click</b> for "best accounts receivable automation software" and <b style="color:var(--white);font-weight:500">$50</b> for "ar automation tools." Nobody spends that on browsers. Those are buyers with a shortlist open.<br><br>"Invoice automation software" is the one that stands out on its own: 3,500 searches a month at difficulty 5. That is a lot of demand behind almost no defence, and there is no page on anchorbase.com aimed at it.</p>
   </section>
 
   <section>
@@ -317,7 +361,7 @@ footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
             <ul class="inc">
               <li>Your 47 posts currently rank for two keywords, and both are <b>"what is a convenience fee"</b>. That is a consumer question, not a controller's. Right subject, wrong reader.</li>
               <li>Nothing on your site sits in striking distance of page one. There is no quick optimization play here, which is exactly why the full build is the honest recommendation.</li>
-              <li><b>"Embedded payments"</b> gets 1,700 searches a month at difficulty 2. It is your own category term and no page on your site targets it.</li>
+              <li><b>"Invoice automation software"</b> gets 3,500 searches a month at difficulty 5, and <b>"payment reconciliation software"</b> gets 700 at difficulty 1 with a $30 cost per click. Both describe what you do. Neither has a page on your site.</li>
               <li>The integration pages are the sleeper. Someone searching <b>"AR automation for NetSuite"</b> has already told your AE their stack and their problem before the call starts.</li>
             </ul>
             <div class="bestfor"><b>Best for:</b> building the asset that keeps producing demos after the engagement ends. No content or distribution arm.</div>
@@ -383,18 +427,21 @@ footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
           <div class="detail"><div class="detail-in"><div class="detail-pad">
             <p class="dsub">What we build</p>
             <ul class="inc">
-              <li><b>Everything in Option 1.</b> Full strategy, 12 pages, complete technical build, AI optimization, tracking.</li>
-              <li><b>Everything in Option 2.</b> An embedded Inbound Engineer, working on Anchorbase alone.</li>
-              <li><b>One strategy across both.</b> We build the keyword map once and both sides run on it.</li>
+              <li><b>An embedded Inbound Engineer.</b> Everything in Option 2, working on Anchorbase alone.</li>
+              <li><b>Six bottom of funnel pages.</b> The ones that convert: invoice automation software, accounts receivable automation software, payment reconciliation software, b2b payments platform, and the QuickBooks and NetSuite integration pages.</li>
+              <li><b>Technical essentials.</b> Structured data on the money pages and the critical fixes from the audit.</li>
+              <li><b>AI answer optimization</b> on those six pages, so ChatGPT and Perplexity can quote them.</li>
+              <li><b>AI visibility tracking.</b> Daily share of voice against Dealer-Pay, reported monthly.</li>
+              <li><b>Monthly reporting and calls.</b></li>
             </ul>
-            <p class="dsub">Why the two together beat the two apart</p>
+            <p class="dsub">Why the two together beat either one alone</p>
             <ul class="inc">
-              <li>Your content creates the mentions. Mentions are what AI engines cite. Citations are what make the pages rank. Run separately these are two invoices, run together they are one engine.</li>
-              <li>The interviews that feed your LinkedIn and X content are the same interviews that give the category pages something no competitor can copy. We do that work once.</li>
-              <li><b>You cover the gap in the calendar.</b> Search takes a quarter to produce. Content produces in weeks. Together your AEs are not sitting on their hands in month one waiting for Google.</li>
-              <li>Bought separately these two programs are <b>$15,830 a month</b>. Together they are $11,997.</li>
+              <li>Your content creates the mentions. Mentions are what AI engines cite. Citations are what make the pages rank. Run apart these are two invoices. Run together they are one engine.</li>
+              <li>The interviews that feed your LinkedIn and X content are the same interviews that give those six pages something no competitor can copy. We do that work once.</li>
+              <li><b>You cover the gap in the calendar.</b> Search takes a quarter to produce. Content produces in weeks. Your AEs are not sitting on their hands in month one waiting for Google.</li>
             </ul>
-            <div class="bestfor"><b>Best for:</b> getting to $100k MRR on a timeline. This is the one we recommend.</div>
+            <div class="notin"><b style="color:var(--white);font-weight:500">The trade against Option 1:</b> the search side here is scoped to the six pages that convert. You do not get the full site strategy, the complete keyword map, the twelve page build, the triage of your 47 existing posts, design, or the vertical cluster. Those six pages will work hard. The rest of the site stays as it is for now.</div>
+            <div class="bestfor"><b>Best for:</b> meetings in weeks with a search asset started underneath, when the full site build can wait a quarter. This is the one we recommend.</div>
           </div></div></div>
           <div class="chev">Full breakdown <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
         </div>
@@ -424,7 +471,7 @@ footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
           <li>AI visibility baseline set against Dealer-Pay</li>
           <li>Your 47 posts triaged into keep, retarget, merge or remove</li>
           <li>Three page templates built, yours to reuse</li>
-          <li>Homepage and pricing page rebuilt around "embedded payments"</li>
+          <li>Homepage and pricing page rebuilt around your highest intent terms</li>
         </ul>
         <div class="out"><span class="k">For your AEs</span><span class="v">Nothing yet, and we are not going to pretend otherwise. This is the month that makes months two and three work.</span></div>
       </div>
@@ -494,34 +541,34 @@ footer{border-top:1px solid var(--div);padding:40px 0 60px;margin-top:20px}
         <div class="mh"><span class="mn">Month 1</span><span class="mt">Both engines start</span></div>
         <ul>
           <li>Inbound Engineer embeds, interviews begin, posting starts week two</li>
-          <li>Full site audit and keyword map built</li>
+          <li>Technical audit and the critical fix list</li>
           <li>AI visibility baseline set against Dealer-Pay</li>
-          <li>47 posts triaged, templates built</li>
-          <li>Homepage and pricing rebuilt around "embedded payments"</li>
+          <li>The six page targets confirmed and templates built</li>
+          <li>Structured data deployed on the money pages</li>
         </ul>
-        <div class="out"><span class="k">For your AEs</span><span class="v">First warm conversations by weeks three and four, while the search asset is under construction.</span></div>
+        <div class="out"><span class="k">For your AEs</span><span class="v">First warm conversations by weeks three and four, while the pages are still in build.</span></div>
       </div>
       <div class="mo">
         <div class="mh"><span class="mn">Month 2</span><span class="mt">Content feeds the pages</span></div>
         <ul>
-          <li>Six pages live: three category, three integration</li>
-          <li>Technical build executed, structured data across the site</li>
+          <li>First three pages live: invoice automation software, AR automation software, payment reconciliation software</li>
           <li>Daily content in full production, first video shipped</li>
           <li>Interviews feeding both the posts and the page copy</li>
+          <li>Lead magnet live and collecting</li>
           <li>First AI citations appearing, helped by the mentions</li>
         </ul>
-        <div class="out"><span class="k">For your AEs</span><span class="v">Two sources at once. Warm inbound from content, plus the first high intent demos off the integration pages.</span></div>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Two sources at once. Warm inbound from the content, plus the first search traffic landing on the category pages.</span></div>
       </div>
       <div class="mo">
         <div class="mh"><span class="mn">Month 3</span><span class="mt">The engine turns over</span></div>
         <ul>
-          <li>Six more pages: four vertical, two comparison</li>
-          <li>Page one on the low difficulty category terms</li>
+          <li>Final three pages live: b2b payments platform, plus the QuickBooks and NetSuite integrations</li>
+          <li>Movement on the low difficulty category terms</li>
           <li>Second lead magnet, content compounding</li>
-          <li>Q2 roadmap queued, team trained on the system</li>
+          <li>Q2 roadmap queued, so the pipeline does not stop at day 90</li>
           <li>Full quarter report with attribution on every meeting</li>
         </ul>
-        <div class="out"><span class="k">For your AEs</span><span class="v">Both channels feeding one calendar, and search volume still climbing from here.</span></div>
+        <div class="out"><span class="k">For your AEs</span><span class="v">Both channels feeding one calendar. The integration pages bring prospects who already named their stack.</span></div>
       </div>
     </div>
   </section>
